@@ -1,21 +1,44 @@
 body {
-    background: #f8fafd;
-    font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
+  background: #f8fafd;
+  font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
+}
+
+/* Navbar Styling */
+.navbar {
+  background-color: #fff !important;
+  box-shadow: 0 2px 8px rgba(3,41,64,0.06); /* Subtle shadow for separation */
+}
+.navbar-brand {
+  color: #032940 !important;       /* Maritime Blue */
+  font-size: 2.2rem !important;    /* Large font size */
+  font-weight: 800 !important;     /* Bold */
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: color 0.2s;
+}
+@media (max-width: 768px) {
+  .navbar-brand {
+    font-size: 1.55rem !important;
   }
-  .navbar { background-color: #032940 !important; }
-  .navbar-brand, .nav-link, .navbar-toggler { color: #fff !important; }
+}
+
+.nav-link, .navbar-toggler {
+  color: #032940 !important;       /* Ensure links are visible on white */
+}
+.navbar-logo {
+  height: 120px;
+  width: auto;
+  margin-left: 16px;
+}
+@media (max-width: 768px) {
   .navbar-logo {
-    height: 72px;
-    width: auto;
-    margin-left: 16px;
+    height: 32px;
+    margin-left: 8px;
   }
-  @media (max-width: 768px) {
-    .navbar-logo {
-      height: 24px;
-      margin-left: 8px;
-    }
-  }
- .hero {
+}
+
+/* ...the rest of your CSS remains as you provided... */
+.hero {
   position: relative;
   min-height: 70vh;
   background:
@@ -28,32 +51,32 @@ body {
   animation: hero-fade-in 1.6s cubic-bezier(.23,1.02,.36,.98);
 }
 
-  
-  @keyframes hero-fade-in {
-    from { opacity: 0; transform: scale(1.04);}
-    to { opacity: 1; transform: scale(1);}
-  }
-  
-  .hero-content { 
-    position: relative; 
-    z-index: 2; 
-    padding: 40px 0 30px 0;
-  }
-  .hero::before {
-    content: "";
-    position: absolute;
-    top: 0; left: 0; right: 0; bottom: 0;
-    background: rgba(3,41,64,0.3);
-    z-index: 1;
-  }
-  
-  .section-title {
-    color: #54dbdb;
-    margin-top: 40px;
-    margin-bottom: 20px;
-    font-weight: 600;
-  }
-  .about-card {
+@keyframes hero-fade-in {
+  from { opacity: 0; transform: scale(1.04);}
+  to { opacity: 1; transform: scale(1);}
+}
+
+.hero-content { 
+  position: relative; 
+  z-index: 2; 
+  padding: 40px 0 30px 0;
+}
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(3,41,64,0.3);
+  z-index: 1;
+}
+
+.section-title {
+  color: #54dbdb;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+ .about-card {
   background: #fff;
   border-radius: 12px;
   border: none;
