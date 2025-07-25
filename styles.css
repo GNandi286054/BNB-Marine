@@ -1,0 +1,161 @@
+body {
+    background: #f8fafd;
+    font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
+  }
+  .navbar { background-color: #032940 !important; }
+  .navbar-brand, .nav-link, .navbar-toggler { color: #fff !important; }
+  .navbar-logo {
+    height: 72px;
+    width: auto;
+    margin-left: 16px;
+  }
+  @media (max-width: 768px) {
+    .navbar-logo {
+      height: 24px;
+      margin-left: 8px;
+    }
+  }
+ .hero {
+  position: relative;
+  min-height: 70vh;
+  background:
+    linear-gradient(rgba(3,41,64,0.6), rgba(0,119,190,0.4)),
+    url('images/ship-image.jpg') center center/cover no-repeat;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: hero-fade-in 1.6s cubic-bezier(.23,1.02,.36,.98);
+}
+
+  
+  @keyframes hero-fade-in {
+    from { opacity: 0; transform: scale(1.04);}
+    to { opacity: 1; transform: scale(1);}
+  }
+  
+  .hero-content { 
+    position: relative; 
+    z-index: 2; 
+    padding: 40px 0 30px 0;
+  }
+  .hero::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(3,41,64,0.3);
+    z-index: 1;
+  }
+  
+  .section-title {
+    color: #54dbdb;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    font-weight: 600;
+  }
+  .about-card {
+  background: #fff;
+  border-radius: 12px;
+  border: none;
+  box-shadow: 0 2px 12px rgba(3,41,64,0.07);
+  padding: 28px 20px 18px 20px;
+  transition: box-shadow 0.18s cubic-bezier(.23,1.02,.36,.98);
+  position: relative;
+}
+.about-card:hover {
+  box-shadow: 0 6px 20px rgba(0,119,190,0.15);
+}
+.about-card .card-title {
+  color: #032940;
+  font-weight: 700;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  letter-spacing: 0.7px;
+}
+.about-card .card-text {
+  color: #333;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+@media (max-width: 768px) {
+  .about-card {
+    margin-bottom: 24px;
+    padding: 22px 14px;
+  }
+}
+
+
+
+  .service-card {
+    min-height: 240px;
+    border-radius: 10px;
+    border: none;
+    background: #fff;
+    box-shadow: 0 2px 8px rgba(3,41,64,0.07);
+    transition: box-shadow 0.16s;
+  }
+  .service-card:hover {
+    box-shadow: 0 6px 24px rgba(0,119,190,0.13);
+  }
+  
+  /* Override blue Bootstrap text color for card headings inside .service-card */
+.service-card .card-title.text-primary {
+  color: #fff !important;
+}
+  .service-card {
+  position: relative;
+  color: #fff;
+  overflow: hidden;
+}
+
+.service-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: rgba(3,41,64,0.5); /* overlay for readability */
+}
+
+/* Unique backgrounds for each card */
+.port-consultancy-bg {
+  background: url('images/port-consultancy.jpg') center center/cover no-repeat;
+}
+.container-logistics-bg {
+  background: url('images/container-logistics.jpg') center center/cover no-repeat;
+}
+.port-captaincy-bg {
+  background: url('images/port-captaincy.jpeg') center center/cover no-repeat;
+}
+.surveys-bg {
+  background: url('images/surveys.jpeg') center center/cover no-repeat;
+}
+.compass-bg {
+  background: url('images/compass.jpg') center center/cover no-repeat;
+}
+
+/* Place card content above the overlay */
+.service-card .card-body {
+  position: relative;
+  z-index: 2;
+}
+
+  .gallery-img {
+      width: 100%;
+      height: 500px;
+      object-fit: cover;
+      object-position: center;
+      border-radius: 8px;
+  }
+  @media (max-width: 768px) {
+    .gallery-img { max-height: 160px;}
+  }
+  
+  .contact-table td {
+    vertical-align: top;
+    padding: 4px 8px;
+  }
+  footer {
+    font-size: 0.97rem;
+    letter-spacing: 0.3px;
+  }
+  
